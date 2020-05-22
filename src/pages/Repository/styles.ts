@@ -37,6 +37,7 @@ export const RepositoryInfo = styled.section`
 
     div {
       margin-left: 24px;
+      flex: 1;
 
       strong {
         font-size: 36px;
