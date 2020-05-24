@@ -1,11 +1,11 @@
 import React, { useState, FormEvent, useEffect } from 'react';
-import { FiChevronRight } from 'react-icons/fi';
+import { FiChevronRight, FiX, FiTrash2 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import { Title, Form, Repositories, Error } from './styles';
+import { Title, Form, Repositories, Error, ClearButton } from './styles';
 
 interface Repository {
   full_name: string;
@@ -38,6 +38,17 @@ const Dashboard: React.FC = () => {
       JSON.stringify(repositories),
     );
   }, [repositories]);
+
+  function handleCleanAll() {
+    setRepositories([]);
+  }
+
+  function handleRemoveRepository(name: string) {
+    const newRepositories = repositories.filter(
+      (item) => item.full_name !== name,
+    );
+    setRepositories(newRepositories);
+  }
 
   async function handleAddRepository(
     event: FormEvent<HTMLFormElement>,
@@ -79,21 +90,30 @@ const Dashboard: React.FC = () => {
 
       <Repositories>
         {repositories.map((repository) => (
-          <Link
-            key={repository.full_name}
-            to={`/repositories/${repository.full_name}`}
-          >
-            <img
-              src={repository.owner.avatar_url}
-              alt={repository.owner.login}
-            />
-            <div>
-              <strong>{repository.full_name}</strong>
-              <p>{repository.description}</p>
-            </div>
-            <FiChevronRight size={20} />
-          </Link>
+          <div key={repository.full_name}>
+            <button
+              onClick={() => handleRemoveRepository(repository.full_name)}
+            >
+              <FiX size={20} />
+            </button>
+            <Link to={`/repositories/${repository.full_name}`}>
+              <img
+                src={repository.owner.avatar_url}
+                alt={repository.owner.login}
+              />
+              <div>
+                <strong>{repository.full_name}</strong>
+                <p>{repository.description}</p>
+              </div>
+            </Link>
+          </div>
         ))}
+        {repositories.length > 1 && (
+          <ClearButton onClick={handleCleanAll}>
+            <FiTrash2 size={20} />
+            Clean all
+          </ClearButton>
+        )}
       </Repositories>
     </>
   );
