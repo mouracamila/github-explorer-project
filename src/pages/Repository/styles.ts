@@ -26,28 +26,31 @@ export const RepositoryInfo = styled.section`
   margin-top: 80px;
 
   header {
-    display: flex;
-    align-items: center;
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
 
-    img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-    }
-
-    div {
-      margin-left: 24px;
-      flex: 1;
-
-      strong {
-        font-size: 36px;
-        color: #3d3d4d;
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
       }
 
-      p {
-        font-size: 18px;
-        color: #737380;
-        margin-top: 4px;
+      div {
+        margin-left: 24px;
+        flex: 1;
+
+        strong {
+          font-size: 36px;
+          color: #3d3d4d;
+        }
+
+        p {
+          font-size: 18px;
+          color: #737380;
+          margin-top: 4px;
+        }
       }
     }
   }

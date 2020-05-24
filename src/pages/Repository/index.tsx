@@ -22,6 +22,7 @@ interface Repository {
     login: string;
     avatar_url: string;
   };
+  html_url: string;
 }
 
 interface Issue {
@@ -62,14 +63,16 @@ const Repository: React.FC = () => {
       {repository && (
         <RepositoryInfo>
           <header>
-            <img
-              src={repository.owner.avatar_url}
-              alt="{repository.owner.login }"
-            />
-            <div>
-              <strong>{repository.full_name}</strong>
-              <p>{repository.description}</p>
-            </div>
+            <a target="_blank" href={repository.html_url}>
+              <img
+                src={repository.owner.avatar_url}
+                alt="{repository.owner.login}"
+              />
+              <div>
+                <strong>{repository.full_name}</strong>
+                <p>{repository.description}</p>
+              </div>
+            </a>
           </header>
           <ul>
             <li>
