@@ -7,7 +7,7 @@ GitHub Explorer
 
 ## Introdution
 
-This project was developer in [RocketSeat](https://rocketseat.com.br/) Bootcamp 11. It has the objective to create a UI, with [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/), to consume the [GitHub API](https://api.github.com).
+This project was developed in [RocketSeat](https://rocketseat.com.br/) Bootcamp 11. It has the objective to create a UI, with [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/), to consume the [GitHub API](https://api.github.com).
 
 ## Structuring & Techologies
 
