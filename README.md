@@ -1,33 +1,32 @@
-
 ![github-explorer](https://raw.githubusercontent.com/mouracamila/github-explorer-project/master/explanation.gif)
 
 <h1 align="center">
 GitHub Explorer
 </h1>
 
-## Introdution
+## Introduction
 
-This project was developed in [RocketSeat](https://rocketseat.com.br/) Bootcamp 11. It has the objective to create a UI, with [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/), to consume the [GitHub API](https://api.github.com).
+This project was developed at [RocketSeat](https://rocketseat.com.br/) Bootcamp 11. Its objective was to create a UI, using [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/), to consume the [GitHub API](https://api.github.com).
 
-## Structuring & Techologies
+## Structuring & Technologies
 
-**API request**, has used HTTP client [Axios](https://github.com/axios/axios).
+**API request**, uses [Axios](https://github.com/axios/axios) HTTP client.
 
-**Navigation**, has utilized the [React-router-dom](https://reacttraining.com/react-router/web/guides/quick-start). The navigation inside aplication has utilized the hooks _useRouteMatch_ (these or any hooks are abailable React >= 16.8).
+**Navigation**, uses [React-router-dom](https://reacttraining.com/react-router/web/guides/quick-start). The application navigation takes advantage of the hooks _useRouteMatch_ (these or any hooks are available React >= 16.8).
 
-**Tagged the components** for to work with CSS has use the [Styled components](https://styled-components.com/).
+**Tagged the components**, to work with CSS uses [Styled components](https://styled-components.com/).
 
-**Colors**In the hover buttons, had applied the property _shade_ the [Polished](https://polished.js.org/) library.
+**Colors**, for the hover buttons, it applies the property _shade_ from [Polished](https://polished.js.org/) library.
 
 ## Developed beyond the proposal
 
-I implemented three new functionality, these being:
+I implemented three new functionality:
 
-- Able to delete repository in the list, the dashboard.
-- Able to delete all repository in the list.
-- Able to navigate to repository.
+- Delete the repository in the list, the dashboard.
+- Delete all repositories in the list.
+- Navigate to the repository, from the repository’s details page.
 
-## Instalation
+## Installation
 
 1. Clone this Repository:
 
@@ -48,18 +47,19 @@ $ yarn
 3. Running project:
 
 ```
+
 $ yarn dev
 
 ```
 
-After running **yarn dev** the project, in your terminal, this message shold be displayed:
+After running **yarn dev** the project, in your terminal, this message should be displayed:
 
 ```
 Compiled successfully!
 
 You can now view github-explorer-project in the browser.
 
-Local:http://localhost:3000
+Local: http://localhost:3000
 ```
 
 ## License
