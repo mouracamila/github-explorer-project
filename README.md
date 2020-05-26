@@ -1,8 +1,9 @@
+
+![github-explorer](https://raw.githubusercontent.com/mouracamila/github-explorer-project/master/explanation.gif)
+
 <h1 align="center">
 GitHub Explorer
 </h1>
-
-![github-explorer](https://raw.githubusercontent.com/mouracamila/github-explorer-project/master/explanation.gif)
 
 ## Introdution
 
