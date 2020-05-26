@@ -102,7 +102,7 @@ export const Repositories = styled.div`
       transition: transform 0.2s;
 
       &:hover {
-        transform: translateX(5px);
+        background: ${shade(0.2, '#efe8e8')};
       }
     }
 
